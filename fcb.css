@@ -1,0 +1,453 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family:  'Roboto', sans-serif;
+   
+}
+
+#header {
+    background-color: #f00;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    /* để bám dính lên trên */
+    left: 0;
+    /* để bám dính bên trái trang web */
+    right: 0;
+    /* để bám dính bên phải trang web */
+    z-index: 1;
+   
+}
+
+.container{
+    display: flex;
+    margin: 0px auto;
+   
+}
+
+nav{
+    display: flex ;
+    justify-content: space-between;
+    justify-items:center ;
+}
+
+.logo{
+    padding: 5px;
+    margin-left: 16px;
+}
+
+.logo img{
+    max-width: 50px;
+    height: auto;
+   
+}
+
+#main-menu{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0; 
+}
+
+#main-menu li{
+    position: relative;
+}
+
+#main-menu li a{
+    color: white;
+    display: block;
+    padding: 18px 20px;
+    text-decoration: none;
+    
+}
+
+#main-menu ul.sub-menu{
+    position: absolute;
+    background-color:#f00 ;
+    list-style-type: none;
+    width: 200px;
+    display: none; 
+    
+}
+
+#main-menu li:hover ul.sub-menu{
+    display: block;
+}
+
+#main-menu li{
+   line-height: 32px;
+}
+
+
+#main-menu ul.sub-menu  a{
+    padding: 8px 15px;
+    border: 0.1px solid #434343;
+    left: 0;
+    border-left: none;
+    border-right: none;
+    
+
+}
+
+#main-menu ul.sub-menu li:hover > a{ 
+  
+    background-color: brown;
+}
+
+
+#main-menu ul.sub-menu li:first-child a{
+    border: none;
+}
+
+#main-menu ul.sub-menu li:last-child a{
+    border: none;
+}
+
+#main-menu ul.sub-menu  ul.sub-menu {
+    top: -13px;
+    left: 200px;
+}
+
+/* thiết lập border khi hover */
+#main-menu>li>a{
+    position: relative;
+}
+
+#main-menu>li>a::before{
+    content: " ";
+    height: 4px;
+    width: 0px;
+    background-color: #f00;
+    position: absolute;
+    bottom: 0;
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1)
+}
+#main-menu>li:hover>a::before{
+    display: block;
+    left: 0;
+    width: 100%; 
+}
+
+
+
+.account{
+  
+    padding: 21px 21px;
+}
+
+.account a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.account .login{
+    padding-right: 8px;
+    border-right: 1px solid #fff;
+}
+
+.slider{
+    padding-top: 50%;
+    background: url('/câcnhtaive/anhmu/santasredhelpers1638975096500_xlarge.webp') top center /cover no-repeat;
+}
+
+.trade-mu{
+    text-align: center;
+    background: antiquewhite;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.content-player{
+    background-color: black;
+}
+
+.content-player .note-position{
+    margin: 0px 0px 32px 0px;
+    border-bottom: 2px solid #f00;
+    font-size: 30px ;
+    font-weight: 30px ;
+}
+
+ .mu-gk .list-player{
+    display: flex;
+    justify-content: space-around;
+}
+
+.note-position{
+    color: #fff;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.position-player{
+    color: #fff;
+}
+ 
+.player img{
+    width: 250px;
+    height: 197px;
+    border-radius: 12px;
+}
+
+.player img:hover{
+    transform: scale(0.7);
+    transition: 0.5s;
+}
+
+.mu-gk .position-player{
+    
+    padding: 8px;
+    border-bottom: solid rgb(216, 216, 216) 1px;
+    margin-bottom: 16px;
+}
+
+.mu-def .list-player{
+   display: flex;
+   justify-content: space-around;
+   margin-bottom: 18px;
+  
+}
+
+.mu-def .position-player1{
+    border-bottom: solid rgb(216, 216, 216) 1px;
+    margin-bottom: 16px;
+}
+
+.mu-midfileders .list-player{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 18px;
+   
+ }
+ 
+ .mu-midfileders .position-player2{
+     border-bottom: solid rgb(216, 216, 216) 1px;
+     margin-bottom: 16px;
+ }
+ 
+ .mu-forwards .list-player{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 18px;
+   
+ }
+ 
+ .mu-forwards .position-player3{
+     border-bottom: solid rgb(216, 216, 216) 1px;
+     margin-bottom: 16px;
+     
+ }
+
+ .list-player .player{
+     position: relative;
+ }
+
+ .player .number-player{
+     position: absolute;
+ }
+
+ .player p{
+     color: #fff;
+ }
+
+.player .number-player{
+    top: 120px;
+    padding: 6px;
+    border-bottom: 1px solid #f00;
+    margin-left: 6px;
+    
+}
+
+.poster-mu
+{
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+
+#coach-mu{
+    display: flex;
+    background: black;
+    color: #fff;
+}
+
+#coach-mu .info-coach{
+    text-align: center;
+   margin-right: 16px;
+  
+}
+
+#coach-mu .tilte-coach{
+    text-align: center;
+    margin-left: 95px;
+   
+}
+
+#coach-mu .reference-coach{
+    padding: 16px;
+}
+
+.img-coach img{
+    width: 400px;
+}
+
+#coach-mu .name-coach,
+#coach-mu .matches-coach{
+
+border-bottom:  1px solid #f00;
+}
+
+.img-coach img:hover{
+    transform: scale(0.7);
+    transition: 0.5s;
+}
+
+.poster-cr7{
+    text-align: center;
+    margin-top: 3px;
+}
+
+#stadium{
+    position: relative;
+}
+
+#stadium .background-stadium img{
+   width: 100%;
+ 
+}
+
+
+
+#stadium .visit-stadium {
+    position: absolute;
+    top: 0;
+    top: 600px;
+    color: #fff;
+    margin-left: 16px;
+    font-size: 30px;
+}
+
+.list-visit{
+    margin-top: 32px;
+}
+
+.list-visit .location-group1{
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 80px;
+    margin-left: 80px;
+    position: relative;
+   
+}
+
+.place-mu a{
+    color: #fff;
+}
+
+.location-group1 .group1{
+    position: absolute;
+    bottom: 80px;
+    font-size: 20px;
+    padding: 16px;
+}
+
+
+#stadium .place-mu img{
+    margin-top: px;
+    width: 500px;
+    border-radius: 20px;
+}
+
+#stadium .place-mu img{
+    margin-top: 16px;
+    width: 500px;
+    border-radius: 20px;
+}
+
+.list-visit .location-group2{
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 80px;
+    margin-left: 80px;
+    position: relative;
+}
+
+.location-group1 .group1{
+    position: absolute;
+    bottom: 80px;
+    font-size: 20px;
+    padding: 16px;
+}
+
+.location-group2 .group2{
+    position: absolute;
+    bottom: 80px;
+    font-size: 20px;
+    padding: 16px;
+}
+
+.ti-arrow-right{
+    font-size: 17px;
+    color: red;
+}
+
+#footer .icon-footer{
+    display: flex;
+   justify-content: center;
+    background-color: #2a2a2a;;
+    padding: 64px;
+}
+
+.icon-footer a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.icon-footer a i{
+    font-size: 35px;
+    padding: 6px;
+}
+
+.icon-footer a:hover i{
+    background-color:  #ad3b3b;
+}
+
+#footer .trade-footer{
+   display: flex;
+   justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
